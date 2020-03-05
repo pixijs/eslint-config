@@ -1,0 +1,27 @@
+{
+  "name": "eslint-config-pixi",
+  "version": "1.0.0",
+  "description": "ESLint config for pixi.js plugin creators",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SukantPal/eslint-config-pixi.git"
+  },
+  "keywords": [
+    "pixi.js",
+    "eslint-config"
+  ],
+  "author": "Shukant K. Pal <shukantpal@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SukantPal/eslint-config-pixi/issues"
+  },
+  "homepage": "https://github.com/SukantPal/eslint-config-pixi#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0"
+  }
+}
