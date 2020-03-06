@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-pixi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint config for pixi.js plugin creators",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/SukantPal/eslint-config-pixi#readme",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.22.0",
-    "@typescript-eslint/parser": "^2.22.0"
+    "@typescript-eslint/parser": "^2.22.0",
+    "typescript": "^3.8.3"
   }
 }
