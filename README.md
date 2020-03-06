@@ -1,5 +1,21 @@
-# Write pixi.js plugins the pixi.js style
+# PixiJS Code Style
 
-Pixi.js has a unique code-style and this ESLint config is for those who want to
-maintain that code-style in their own codebase. It is primarily intended for pixi.js
-plugins written in Typescript.
+PixiJS has a unique taste of coding style, which inspired me to create an ESLint config
+that can be installed for any project. This is primarily created for PixiJS plugins built
+in Typescript.
+
+## Install
+
+```
+npm install -D eslint-config-pixi
+```
+
+## Use
+
+```js
+{
+    "extends": [
+        "eslint-config-pixi"
+    ]
+}
+```
