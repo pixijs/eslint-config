@@ -1,14 +1,11 @@
 {
-  "name": "eslint-config-pixi",
+  "name": "@pixi/eslint-config",
   "version": "1.0.1",
-  "description": "ESLint config for pixi.js plugin creators",
+  "description": "ESLint config for PixiJS plugin creators",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SukantPal/eslint-config-pixi.git"
+    "url": "git+https://github.com/pixijs/eslint-config-pixi.git"
   },
   "keywords": [
     "pixi.js",
@@ -17,12 +14,17 @@
   "author": "Shukant K. Pal <shukantpal@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SukantPal/eslint-config-pixi/issues"
+    "url": "https://github.com/pixijs/eslint-config-pixi/issues"
   },
-  "homepage": "https://github.com/SukantPal/eslint-config-pixi#readme",
+  "homepage": "https://github.com/pixijs/eslint-config-pixi#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.22.0",
-    "@typescript-eslint/parser": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0"
+  },
+  "peerDependencies": {
     "typescript": "^3.8.3"
   }
 }
