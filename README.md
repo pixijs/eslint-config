@@ -7,7 +7,7 @@ in Typescript.
 ## Install
 
 ```
-npm install -D eslint-config-pixi
+npm install -D @pixi/eslint-config
 ```
 
 ## Use
@@ -15,7 +15,7 @@ npm install -D eslint-config-pixi
 ```js
 {
     "extends": [
-        "eslint-config-pixi"
+        "@pixi/eslint-config"
     ]
 }
 ```
