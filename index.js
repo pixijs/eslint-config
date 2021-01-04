@@ -264,7 +264,9 @@ module.exports = {
         "@typescript-eslint/interface-name-prefix": 0,
         "@typescript-eslint/no-unused-expressions": 1,
         "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-        "@typescript-eslint/no-duplicate-imports": ["error"]
+        "@typescript-eslint/no-duplicate-imports": ["error"],
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"]
       }
     }
   ]
