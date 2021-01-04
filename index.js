@@ -16,7 +16,7 @@ module.exports = {
   "plugins": ["@typescript-eslint"],
   "rules": {
       // Possible Errors
-      "comma-dangle": [1, "always-multiline"],
+      "comma-dangle": [1, "only-multiline"],
       "no-cond-assign": [1, "except-parens"],
       "no-console": [1, { "allow": ["warn", "error"] }],
       "no-constant-condition": 1,
@@ -24,7 +24,7 @@ module.exports = {
       "no-debugger": 1,
       "no-dupe-args": 1,
       "no-dupe-keys": 1,
-      "no-duplicate-case": 1,
+      "no-duplicate-case": "off",
       "no-empty": 1,
       "no-empty-character-class": 1,
       "no-ex-assign": 1,
@@ -44,7 +44,12 @@ module.exports = {
       "no-unreachable": 1,
       "no-unsafe-finally": 1,
       "use-isnan": 1,
-      "valid-jsdoc": [0, { "requireReturn": false, "requireReturnType": true, "requireParamDescription": true, "requireReturnDescription": true }],
+      "valid-jsdoc": [0, {
+        "requireReturn": false,
+        "requireReturnType": true,
+        "requireParamDescription": true,
+        "requireReturnDescription": true
+      }],
       "valid-typeof": 1,
 
       // Best Practices
@@ -100,7 +105,7 @@ module.exports = {
       "no-sequences": 1,
       "no-throw-literal": 1,
       "no-unmodified-loop-condition": 1,
-      "no-unused-expressions": 1,
+      "no-unused-expressions": "off",
       "no-unused-labels": 1,
       "no-useless-call": 1,
       "no-useless-concat": 1,
@@ -121,13 +126,13 @@ module.exports = {
       "no-catch-shadow": 1,
       "no-delete-var": 1,
       "no-label-var": 1,
-      "no-restricted-globals": 1,
+      "no-restricted-globals": ["error", "event", "fdescribe"],
       "no-shadow": 0,
       "no-shadow-restricted-names": 1,
       "no-undef": 1,
       "no-undef-init": 1,
       "no-undefined": 0,
-      "no-unused-vars": 1,
+      "no-unused-vars": "off",
       "no-use-before-define": [1, "nofunc"],
 
       // Node.js and CommonJS
@@ -227,7 +232,7 @@ module.exports = {
       "no-confusing-arrow": [1, { "allowParens": true }],
       "no-const-assign": 1,
       "no-dupe-class-members": 0,
-      "no-duplicate-imports": 1,
+      "no-duplicate-imports": 0,
       "no-new-symbol": 1,
       "no-restricted-imports": 0,
       "no-this-before-super": 1,
@@ -250,14 +255,17 @@ module.exports = {
       "yield-star-spacing": [1, "before"]
   },
   "overrides": [
-      {
-        "files": ["*.ts"],
-        "extends": ["plugin:@typescript-eslint/recommended"],
-        "rules": {
-          "@typescript-eslint/semi": 1,
-          "@typescript-eslint/no-explicit-any": 0,
-          "@typescript-eslint/interface-name-prefix": 0
-        }
+    {
+      "files": ["*.ts"],
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "rules": {
+        "@typescript-eslint/semi": 1,
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/interface-name-prefix": 0,
+        "@typescript-eslint/no-unused-expressions": 1,
+        "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+        "@typescript-eslint/no-duplicate-imports": ["error"]
       }
+    }
   ]
 }

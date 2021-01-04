@@ -5,26 +5,32 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pixijs/eslint-config-pixi.git"
+    "url": "git+https://github.com/pixijs/eslint-config.git"
   },
   "keywords": [
     "pixi.js",
+    "pixijs",
     "eslint-config"
   ],
   "author": "Shukant K. Pal <shukantpal@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pixijs/eslint-config-pixi/issues"
+    "url": "https://github.com/pixijs/eslint-config/issues"
   },
-  "homepage": "https://github.com/pixijs/eslint-config-pixi#readme",
+  "homepage": "https://github.com/pixijs/eslint-config#readme",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.22.0",
-    "@typescript-eslint/parser": "^2.22.0"
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": ">=7.0.0",
+    "typescript": ">=3.8.3"
   },
   "peerDependencies": {
-    "typescript": "^3.8.3"
+    "eslint": ">=7.0.0",
+    "typescript": ">=3.8.3"
   }
 }
