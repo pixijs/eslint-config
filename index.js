@@ -275,7 +275,7 @@ module.exports = {
         "@typescript-eslint/no-unused-vars": [1, { "argsIgnorePattern": "^_" }],
         "no-unused-vars": "off",
 
-        "@typescript-eslint/comma-dangle": [1, "always-multiline"],
+        "@typescript-eslint/comma-dangle": [1, "only-multiline"],
         "comma-dangle": "off",
 
         "@typescript-eslint/space-before-function-paren": [1, { "anonymous": "always", "named": "never" }],
