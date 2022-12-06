@@ -23,7 +23,8 @@
   },
   "scripts": {
     "lint": "eslint --cache --ext .js . --ignore-path .gitignore --max-warnings 0",
-    "lintfix": "npm run lint -- --fix"
+    "lintfix": "npm run lint -- --fix",
+    "test": "npm run lint"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.0.0",
