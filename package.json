@@ -1,6 +1,6 @@
 {
   "name": "@pixi/eslint-config",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "ESLint config for PixiJS plugin creators",
   "main": "index.js",
   "repository": {
