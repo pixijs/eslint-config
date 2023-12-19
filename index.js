@@ -219,7 +219,7 @@ module.exports = {
         'space-in-parens': [1, 'never'],
         'space-infix-ops': 1,
         'space-unary-ops': [1, { words: true, nonwords: false }],
-        'spaced-comment': [1, 'always'],
+        'spaced-comment': [1, 'always', { markers: ['/'] }],
         'unicode-bom': [1, 'never'],
         'wrap-regex': 1,
 
@@ -257,6 +257,7 @@ module.exports = {
         // Imports and Exports
         'import/first': 1,
         'import/newline-after-import': 1,
+        'import/no-duplicates': 1,
         'simple-import-sort/imports': [1, {
             groups: [
                 [
@@ -326,7 +327,6 @@ module.exports = {
                 '@typescript-eslint/no-extra-semi': 1,
                 'no-extra-semi': 0,
 
-                '@typescript-eslint/no-duplicate-imports': 1,
                 'no-duplicate-imports': 0,
 
                 '@typescript-eslint/no-useless-constructor': 1,

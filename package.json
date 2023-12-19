@@ -13,6 +13,9 @@
     "eslint-config"
   ],
   "author": "Shukant K. Pal <shukantpal@outlook.com>",
+  "contributors": [
+    "Matt Karl <matt@mattkarl.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pixijs/eslint-config/issues"
@@ -22,9 +25,25 @@
     "access": "public"
   },
   "scripts": {
-    "lint": "eslint --cache --ext .js . --ignore-path .gitignore --max-warnings 0",
+    "lint": "eslint --ext .js --ext .ts . --ignore-path .gitignore --max-warnings 0",
     "lintfix": "npm run lint -- --fix",
-    "test": "npm run lint"
+    "test": "DEBUG=eslint:cli-engine npm run lint",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "clean-package": {
+    "indent": 2,
+    "remove": [
+      "eslintConfig",
+      "devDependencies",
+      "scripts",
+      "clean-package"
+    ]
+  },
+  "eslintConfig": {
+    "extends": ["./index.js"]
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -33,11 +52,15 @@
     "eslint-plugin-simple-import-sort": "^10.0.0"
   },
   "devDependencies": {
+    "clean-package": "^2.2.0",
     "eslint": ">=8",
     "typescript": ">=5"
   },
   "peerDependencies": {
     "eslint": ">=8",
     "typescript": ">=5"
-  }
+  },
+  "files": [
+    "index.js"
+  ]
 }
