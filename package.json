@@ -2,7 +2,10 @@
   "name": "@pixi/eslint-config",
   "version": "5.1.0",
   "description": "ESLint config for PixiJS plugin creators",
-  "main": "index.js",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pixijs/eslint-config.git"
@@ -25,7 +28,7 @@
     "access": "public"
   },
   "scripts": {
-    "lint": "eslint --ext .js --ext .ts . --ignore-path .gitignore --max-warnings 0",
+    "lint": "eslint -c index.mjs . --max-warnings 0",
     "lintfix": "npm run lint -- --fix",
     "test": "DEBUG=eslint:cli-engine npm run lint",
     "preversion": "npm test",
@@ -44,25 +47,29 @@
   },
   "eslintConfig": {
     "extends": [
-      "./index.js"
+      "./index.mjs"
     ]
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-simple-import-sort": "^10.0.0"
+    "@eslint/js": "^9.16.0",
+    "@stylistic/eslint-plugin": "^2.11.0",
+    "eslint": ">=9",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.13.0",
+    "typescript-eslint": "^8.17.0"
   },
   "devDependencies": {
     "clean-package": "^2.2.0",
-    "eslint": ">=8",
+    "eslint": ">=9",
     "typescript": ">=5"
   },
   "peerDependencies": {
-    "eslint": ">=8",
+    "eslint": ">=9",
     "typescript": ">=5"
   },
   "files": [
-    "index.js"
+    "index.mjs"
   ]
 }
