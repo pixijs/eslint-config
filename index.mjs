@@ -1,12 +1,12 @@
-import eslint from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 
 export default tseslint.config(
-    { ignores: ['dist', 'lib'] },
+    { ignores: ['dist'] },
     eslint.configs.recommended,
     tseslint.configs.recommended,
     {
@@ -221,7 +221,6 @@ export default tseslint.config(
             'object-property-newline': 0,
             'one-var': [1, 'never'],
             'one-var-declaration-per-line': [1, 'always'],
-            'operator-assignment': 0,
             'operator-linebreak': [1, 'before'],
             'padded-blocks': [1, 'never'],
             'quote-props': [1, 'as-needed'],
@@ -318,7 +317,6 @@ export default tseslint.config(
             '@typescript-eslint/require-await': 0,
             '@typescript-eslint/no-explicit-any': 0,
             '@typescript-eslint/interface-name-prefix': 0,
-            '@typescript-eslint/no-floating-promises': 'error',
             '@typescript-eslint/consistent-type-imports': [
                 1,
                 { disallowTypeAnnotations: false, fixStyle: 'inline-type-imports' },

@@ -28,7 +28,7 @@
     "access": "public"
   },
   "scripts": {
-    "lint": "eslint --ext .js --ext .ts . --ignore-path .gitignore --max-warnings 0",
+    "lint": "eslint -c index.mjs . --max-warnings 0",
     "lintfix": "npm run lint -- --fix",
     "test": "DEBUG=eslint:cli-engine npm run lint",
     "preversion": "npm test",
